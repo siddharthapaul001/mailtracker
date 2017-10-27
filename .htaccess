@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^track/([a-zA-Z0-9_-]+)$ mailtracker.php?mailid=$1 [QSA]
+</IfModule>
