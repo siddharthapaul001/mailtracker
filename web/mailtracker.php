@@ -40,7 +40,6 @@ if(isset($_GET["mailid"])){
 	$details = json_decode(file_get_contents("http://ip-api.com/json/".$realip));
 	$ua = $_SERVER['HTTP_USER_AGENT'];
 	header("Content-Type: image/png");
-	header("Content-Length: 0");
 	readfile("image/q98ehqd.png");
 }
 ?>
