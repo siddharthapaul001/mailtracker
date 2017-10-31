@@ -40,6 +40,11 @@ if(isset($_GET["mailid"])){
 	$details = json_decode(file_get_contents("http://ip-api.com/json/".$realip));
 	$ua = $_SERVER['HTTP_USER_AGENT'];
 	header("Content-Type: image/png");
+	header("Expires: 0");
+	header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+	header("Cache-Control: no-store, no-cache, must-revalidate");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Pragma: no-cache");
 	readfile("image/q98ehqd.png");
 }
 ?>
